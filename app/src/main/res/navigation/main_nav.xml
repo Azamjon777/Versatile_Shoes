@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/splashScreenFragment">
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.versatile.shoes.cloth.app.presentation.fragments.SplashFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.versatile.shoes.cloth.app.presentation.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_menShoesFragment"
+            app:destination="@id/menShoesFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_womenShoesFragment"
+            app:destination="@id/womenShoesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menShoesFragment"
+        android:name="com.versatile.shoes.cloth.app.presentation.fragments.MenShoesFragment"
+        android:label="fragment_men_shoes"
+        tools:layout="@layout/fragment_men_shoes" />
+    <fragment
+        android:id="@+id/womenShoesFragment"
+        android:name="com.versatile.shoes.cloth.app.presentation.fragments.WomenShoesFragment"
+        android:label="fragment_women_shoes"
+        tools:layout="@layout/fragment_women_shoes" />
+</navigation>
